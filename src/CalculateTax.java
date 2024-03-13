@@ -4,18 +4,18 @@ public class CalculateTax {
         double yearlySalary = 36000;
 
         // 15% bonus with base salary added
-        double yearlySalaryWithBonus = 41400; // 15% bonus with base salary added (3600 + 5400)
+        double yearlySalaryWithBonus = 41400; // 15% bonus with base salary added (36000 + 5400)
 
         //define all sort of taxes
         double federalTaxAmount = 15.5;
-        double stateTaxAmount =3.4;
+        double stateTaxAmount = 3.4;
         double localTaxAmount = 1.8;
 
 
         // calculate taxes
-        double federalTax = yearlySalary * (federalTaxAmount / 100);
-        double stateTax = yearlySalary * stateTaxAmount / 100;
-        double  localTax = yearlySalary * localTaxAmount / 100;
+        double federalTax = yearlySalaryWithBonus * federalTaxAmount / 100;
+        double stateTax = yearlySalaryWithBonus * stateTaxAmount / 100;
+        double  localTax = yearlySalaryWithBonus * localTaxAmount / 100;
 
         // sum of all taxes paid
         double totalTaxPaid = federalTax + stateTax + localTax;
